@@ -4,14 +4,16 @@ def hesap_makinesi():
     print("2. Çıkarma (-)")
     print("3. Çarpma (*)")
     print("4. Bölme (/)")
-    print("5. Çıkış (q)")
+    print("5. Üs alma (^)")
+    print("6. Mod alma (%)")
+    print("7. Çıkış (q)")
 
     while True:
         # Kullanıcıdan işlem seçimi 
-        secim = input("\nBir işlem seçin (1/2/3/4 veya q):")
+        secim = input("\nBir işlem seçin (1/2/3/4/5/6 veya q):")
 
         # Çıkış için kontrol 
-        if secim == 'q' or secim == '5' :
+        if secim == 'q' or secim == '7' :
             print("Hesap makinesi kapanıyor... Görüşürüz!")
             break #Döngü sonlanır 
 
@@ -36,8 +38,12 @@ def hesap_makinesi():
                 print(f"Sonuç: {sayi1} / {sayi2} = {sayi1 / sayi2}")
             else:
                 print("Hata: Bir sayı sıfıra bölünemez!")
+        elif secim == '5':
+            print(f"Sonuç: {sayi1} ^ {sayi2} = {sayi1 ** sayi2}") # ÜS alma işlemi
+        elif secim == '6':
+            print(f"Sonuç: {sayi1} % {sayi2} = {sayi1 % sayi2}")# Mod alma işlemi
         else:
-            print("Hata: Geçersiz işlem seçimi, lütfen 1, 2, 3, 4 veya q seçin." )
+            print("Hata: Geçersiz işlem seçimi, lütfen 1, 2, 3, 4, 5, 6 veya q seçin." )
 
 # Fonksiyonu çalıştır 
 hesap_makinesi() 
